@@ -10,6 +10,7 @@ This repository contains practice commands, exercises and resources to help you 
 - `app/`: Contains Python scripts for simple data processing.
   - `data_process_db.py`: A Python script to simulate processing data with a PostgreSQL database.
   - `data_process.py`: A Python script for simple data processing tasks without a database.
+  - `student.csv`: sample csv file for upload.
 - `PracticeCommands.md`: A document that provides common Docker commands to practice and learn how to work with containers and images.
 - `requirements/`: Contains the requirements file for Python dependencies.
 - `Tasks.md`: A step-by-step guide for completing the Docker training exercises.
@@ -50,6 +51,8 @@ Below is a collection of high-quality free resources to help you learn Docker ef
 ## 📖 Official Documentation & Guides
 
 - **[Docker Docs](https://docs.docker.com/get-started/)**: The official documentation is the best place to start learning Docker concepts and best practices.
+
+- **[Docker Under The Hood](https://medium.com/data-engineer-things/docker-under-the-hood-part-one-03abda8b631f?sk=21bdd4fd244b158c5c9856d9c247b705)**: Nancy's article on Docker for beginners.
 
 ## 🎥 Free Video Tutorials
 
