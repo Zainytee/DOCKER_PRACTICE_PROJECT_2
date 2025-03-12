@@ -133,22 +133,16 @@ Your manager has tasked you with:
      ```sh
      streamlit run <path/filename.py>
      ```
-   - Ensure the image follows best practices to leverage Docker build caching.
+   - Ensure the Dockerfile follows best practices to leverage Docker build caching.
 
 ---
 
-3. **Build the Docker Image**
-
-   - Build the application image using Docker.
-
----
-
-4. **Create Docker Compose Configuration**
+3. **Create Docker Compose Configuration**
 
    - Create a `compose.yml` file.
    - Define services to run the multi-container application:
      - **Application Service**
-       - Uses the application image you built.
+       - Uses the build key to refrence the Dockerfile you created.
        - Binds host port `8501` to container port `8501`.
        - Defines the following environment variables:
          ```yaml
@@ -171,13 +165,13 @@ Your manager has tasked you with:
 
 ---
 
-5. **Run the Multi-Container Application**
+4. **Run the Multi-Container Application**
 
    - Start your application using Docker Compose
 
 ---
 
-6. **Access the Web Application**
+5. **Access the Web Application**
 
    - Open your browser and navigate to [http://localhost:8501](http://localhost:8501).
    - Upload the `student.csv` file available in this repo.
@@ -185,7 +179,7 @@ Your manager has tasked you with:
 
 ---
 
-7. **Verify Database Persistence**
+6. **Verify Database Persistence**
 
    - Execute into your database container:
      ```sh
@@ -198,7 +192,7 @@ Your manager has tasked you with:
 
 ---
 
-8. **Push Your Application Image to Docker Hub**
+7. **Push Your Application Image to Docker Hub**
 
    - Tag and push your Docker image to Docker Hub
 
