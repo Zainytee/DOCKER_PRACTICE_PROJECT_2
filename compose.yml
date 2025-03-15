@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      POSTGRES_HOST: app-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_PORT: 5432
+    depends_on:
+      - db  
+
+  db:
+    image: postgres:alpine
+    container_name: app-db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  
+
+volumes:
+  postgres_data:  
